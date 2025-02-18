@@ -28,12 +28,12 @@ function placeBet() {
     const resultDiv = document.getElementById("result");
 
     if (isNaN(betAmount) || betAmount <= 0) {
-        alert("Please enter a valid bet amount!");
+        alert("กรุณาใส่จำนวนเงินเดิมพัน!");
         return;
     }
 
     if (selectedBet === '') {
-        alert("Please select a bet option!");
+        alert("กรุณาเลือกฝั่ง !");
         return;
     }
 
@@ -70,15 +70,15 @@ function placeBet() {
 
         if (selectedBet === "high" && sum >= 12) {
             reward = betAmount * 2;
-            message = `You bet on High. Sum = ${sum}. You won $${reward}!`;
+            message = `แทง สูง. เลขที่ออก = ${sum}. กินเต็ม ${reward}!`;
         } else if (selectedBet === "mid" && sum === 11) {
             reward = betAmount * 5;
-            message = `You bet on Mid. Sum = ${sum}. You won $${reward}! 🎉`;
+            message = `กลาง คูณ 5. เลขที่ออก = ${sum}. เต็ม คาราเบล ${reward}! 🎉`;
         } else if (selectedBet === "low" && sum <= 10) {
             reward = betAmount * 2;
-            message = `You bet on Low. Sum = ${sum}. You won $${reward}!`;
+            message = `แทง ต่ำ. เลขที่ออก = ${sum}. เนาะๆ ${reward}!`;
         } else {
-            message = `You lost! Sum = ${sum}. Better luck next time!`;
+            message = `เรียบร้อย หมดตัว เลขที่ออก = ${sum}. ไม่เป็นไร วันหน้ายังมี!`;
         }
 
         resultDiv.textContent = message;

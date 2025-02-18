@@ -8,18 +8,18 @@
 </head>
 <body>
     <div class="game-container">
-        <h1>Dice Betting Game</h1>
+        <h1>Say Hi Low เกมส์</h1>
         <div class="betting-section">
-            <label for="bet-amount">Bet Amount:</label>
+            <label for="bet-amount">วางเงิน :</label>
             <input type="number" id="bet-amount" min="1" placeholder="Enter amount">
 
             <div class="bet-choice">
-                <button class="toggle-button" id="bet-high" onclick="selectBet('high')">High (≥ 12)</button>
-                <button class="toggle-button" id="bet-mid" onclick="selectBet('mid')">Mid (= 11)</button>
-                <button class="toggle-button" id="bet-low" onclick="selectBet('low')">Low (≤ 10)</button>
+                <button class="toggle-button" id="bet-high" onclick="selectBet('high')">แทงสูง (≥ 12)</button>
+                <button class="toggle-button" id="bet-mid" onclick="selectBet('mid')">ออกกลาง (= 11)</button>
+                <button class="toggle-button" id="bet-low" onclick="selectBet('low')">แทงต่ำ (≤ 10)</button>
             </div>
             
-            <button class="place-bet-button" onclick="placeBet()">Place Bet</button>
+            <button class="place-bet-button" onclick="placeBet()">แทง</button>
         </div>
         
         <div class="dice-container">
